@@ -2,44 +2,9 @@
 .about {
     padding-top: 94px;
     padding-bottom: 94px;
-    @media screen and (max-width: 1199px) { 
-        display: none;
-       }
     &__container {
         @extend %container;
         width: 1200px;
-    }
-    &__title {
-        @include font(700, 36px, 1.17, 0.03em);
-        margin-top: 0;
-        margin-bottom: 50px;
-        text-align: center;
-        color: $text-color;
-    }
-    &__list {
-        @extend %list;
-        @include flex(null, space-between);
-    }
-    &__item {
-        position: relative;
-        width: 370px;
-        z-index: -1;
-    }
-    &__image {
-        width: 370px;
-    }
-    &__subject {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        margin: 0;
-        padding: 27px 0;
-        width: 100%;
-        height: 70px;
-        background: rgba(47, 48, 58, 0.8);
-        @include font(700, 14px, 1.14, 0.03em);
-        text-align: center;
-        text-transform: uppercase;
-        color: #FFFFFF;
-    }
+
+}
 }
