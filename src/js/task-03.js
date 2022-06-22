@@ -18,7 +18,7 @@ const elements = images.map( ({ url, alt })  => {
   const itemEl = document.createElement('li');
   itemEl.classList.add('item');
 
-  itemEl.insertAdjacentHTML("afterbegin",`<img scr="${url}" alt="${alt}" style="width: 250px;">`);
+  itemEl.insertAdjacentHTML("afterbegin",`<img src="${url}" alt="${alt}" style="width: 350px; height: 200px;">`);
   return itemEl;
 });
 
