@@ -1,1 +1,1 @@
-# Test
+# javascript homework#6
