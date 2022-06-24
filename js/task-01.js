@@ -4,16 +4,15 @@ const itemEl = document.querySelectorAll('.item');
 
 console.log('Number of categories :', listEl.children.length);
 
-const groups = listEl.children
-
-for (const group of groups) {
+itemEl.forEach(function (group) {
     console.log('Category :',group.children[0].textContent)
     console.log('Elements :',group.children[1].children.length)
-}
-
-
-
-
+})
+const str = charCodeAt(a);
+console.log(str)
+// const groups = listEl.children
+// console.log(groups)
+// console.log(itemEl)
 
 // const firstItemNameInlist = itemEl[0].querySelectorAll("li")
 // console.log('Category :',titleEl[0].textContent);
