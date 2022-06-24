@@ -6,10 +6,10 @@ const destroyAllButton = document.querySelector('[data-destroy]');
 const inputEl = document.querySelector("#controls input");
 
 function buildBlocks () {
+  const newBlocks = []
   for (let i = 0; i < inputEl.value; i += 1) {
     const newBlock = document.createElement("div")
-    
-    const colorName = `#${Math.floor(Math.random() * 16777215).toString(16)}`
+    const colorName = getRandomHexColor();
     newBlock.style.backgroundColor = colorName;
 
     newBlock.style.border = "2px solid black";
@@ -19,9 +19,10 @@ function buildBlocks () {
     const size = 30 + i * 10;
     newBlock.style.height = `${size}px`;
     newBlock.style.width = `${size}px`;
-
-    mainBlock.append(newBlock);
+    
+    newBlocks.push(newBlock);
   }
+  mainBlock.append(...newBlocks);
 }
 
 function clearFieldInput () {
@@ -31,9 +32,9 @@ function destroyBlocks() {
   mainBlock.innerHTML = "";
 }
 
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`
-// }
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`
+}
 
 createBlockButton.addEventListener("click", buildBlocks);
 createBlockButton.addEventListener("click", clearFieldInput);
