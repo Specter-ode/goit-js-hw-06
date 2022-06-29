@@ -24,18 +24,15 @@ function buildBlocks () {
   }
   mainBlock.append(...newBlocks);
 }
-
 function clearFieldInput () {
   inputEl.value = "";
 }
 function destroyBlocks() {
   mainBlock.innerHTML = "";
 }
-
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`
 }
-
 createBlockButton.addEventListener("click", buildBlocks);
-createBlockButton.addEventListener("click", clearFieldInput);
 destroyAllButton.addEventListener("click", destroyBlocks);
+createBlockButton.addEventListener("click", clearFieldInput);
